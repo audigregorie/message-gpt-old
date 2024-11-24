@@ -2,12 +2,12 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.ts",
+  "main": "dist/server.js",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q server.ts\" ",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/server.js\" ",
     "build": "tsc",
-    "start": "node server.ts"
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
