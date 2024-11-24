@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { Avatar, IconButton } from '@mui/material';
-// import { Avatar } from '@mui/material';
 import { IoMdSend } from 'react-icons/io';
 import { ChatMessage } from '../../utils/common.interface';
 import toast from 'react-hot-toast';
