@@ -37,7 +37,6 @@ export const userSignup = async (req: Request, res: Response, next: NextFunction
     // Store cookie
     res.clearCookie(COOKIE_NAME, {
       httpOnly: true,
-      // domain: 'localhost',
       domain: process.env.BACKEND_URL,
       signed: true,
       path: '/'
@@ -48,7 +47,6 @@ export const userSignup = async (req: Request, res: Response, next: NextFunction
     expires.setDate(expires.getDate() + 7);
     res.cookie(COOKIE_NAME, token, {
       path: '/',
-      // domain: 'localhost',
       domain: process.env.BACKEND_URL,
       expires,
       httpOnly: true,
@@ -85,7 +83,6 @@ export const userLogin = async (req: Request, res: Response, next: NextFunction)
 
     res.clearCookie(COOKIE_NAME, {
       httpOnly: true,
-      // domain: 'localhost',
       domain: process.env.BACKEND_URL,
 
       signed: true,
@@ -97,7 +94,6 @@ export const userLogin = async (req: Request, res: Response, next: NextFunction)
     expires.setDate(expires.getDate() + 7);
     res.cookie(COOKIE_NAME, token, {
       path: '/',
-      // domain: 'localhost',
       domain: process.env.BACKEND_URL,
       expires,
       httpOnly: true,
@@ -158,7 +154,6 @@ export const userLogout = async (req: Request, res: Response, next: NextFunction
 
     res.clearCookie(COOKIE_NAME, {
       httpOnly: true,
-      // domain: 'localhost',
       domain: process.env.BACKEND_URL,
       signed: true,
       path: '/'
