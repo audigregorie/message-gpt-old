@@ -101,14 +101,14 @@ const Chat = () => {
 
   return (
     <div className="flex flex-1 w-full h-full mt-16 gap-3">
-      <div className="md:flex md:flex-[0.2] md:flex-col hidden">
-        <div className="flex w-full h-[60vh] items-center justify-center bg-[rgb(17,29,39)] rounded-xl flex-col mx-3 ">
-          <Avatar className="mx-auto my-4 bg-white text-black font-bold">
+      <div className="md:flex md:flex-[0.2] md:flex-col hidden ml-3">
+        <div className="flex flex-col items-center gap-6 h-[60vh] bg-[rgb(17,29,39)] rounded-xl">
+          <Avatar className="bg-white text-black font-bold mt-6">
             {auth?.user?.name ? `${auth?.user.name[0]}${auth?.user.name.split(' ')[1]?.[0] || ''}` : '?'}
           </Avatar>
-          <p className='font-["work sans"]'>What can I help with?</p>
-          <p className='font-["work sans"] my-8 p-3'>You can ask questions related to Knowledge Business, Advice, Education, and more.</p>
-          <p>*Please avoid sharing any personal information.</p>
+          <p className='font-["work sans"] text-center'>What can I help with?</p>
+          <p className='font-["work sans"] text-center'>You can ask questions related to Buisness, Education, Advice, and more.</p>
+          <p className="text-center">*Please avoid sharing any personal information.</p>
           <button onClick={handleDeleteChats} className="w-[200px] bg-red-300 hover:bg-red-500 m-auto rounded-xl py-1 px-3 text-white">
             Clear Conversation
           </button>
