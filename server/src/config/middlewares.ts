@@ -1,23 +1,23 @@
 import cors from 'cors';
 import express from 'express';
 import cookieParser from 'cookie-parser';
-import path from 'path';
 import morgan from 'morgan';
-import { fileURLToPath } from 'url';
+// import path from 'path';
+// import { fileURLToPath } from 'url';
 
 export const setupMiddlewares = (app: any) => {
   app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
 
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
+  // const __filename = fileURLToPath(import.meta.url);
+  // const __dirname = path.dirname(__filename);
 
-  if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../client/dist')));
+  // if (process.env.NODE_ENV === 'production') {
+  //   app.use(express.static(path.join(__dirname, '../client/dist')));
 
-    app.get('*', (req: any, res: any) => {
-      res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'));
-    });
-  }
+  //   app.get('*', (req: any, res: any) => {
+  //     res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'));
+  //   });
+  // }
 
   if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
