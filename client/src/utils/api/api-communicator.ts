@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: process.env.NODE_ENV === 'production' ? process.env.BACKEND_URL : process.env.VITE_URL,
+  baseURL: import.meta.env.NODE_ENV === 'production' ? import.meta.env.BACKEND_URL : import.meta.env.VITE_URL,
   withCredentials: true
 });
 
