@@ -1,7 +1,8 @@
+/// <reference types="vite/client" />
 import { createRoot } from 'react-dom/client';
 import { StrictMode } from 'react';
 import App from './App.tsx';
-import './assets/styles/globals.scss';
+import './styles/globals.scss';
 import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider } from './utils/auth/AuthContext.tsx';
 import { Toaster } from 'react-hot-toast';
